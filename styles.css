@@ -253,7 +253,7 @@ body::after {
   pointer-events: none;
 }
 
-/* Floating cosmic orbs */
+/* Optimized purple cosmic orbs */
 .hero::before {
   content: '';
   position: fixed;
@@ -261,14 +261,14 @@ body::after {
   left: 12%;
   width: 90px;
   height: 90px;
-  background: radial-gradient(circle at 30% 30%, rgba(37, 99, 235, 0.25) 0%, rgba(59, 130, 246, 0.15) 50%, transparent 80%);
+  background: radial-gradient(circle at 30% 30%, rgba(147, 51, 234, 0.25) 0%, rgba(168, 85, 247, 0.15) 50%, transparent 80%);
   border-radius: 50%;
-  animation: cosmicOrb1 14s ease-in-out infinite;
+  animation: purpleCosmicOrb1 14s ease-in-out infinite;
   z-index: -1;
   pointer-events: none;
   box-shadow:
-    0 0 40px rgba(37, 99, 235, 0.3),
-    inset 0 0 40px rgba(59, 130, 246, 0.2);
+    0 0 40px rgba(147, 51, 234, 0.3),
+    inset 0 0 40px rgba(168, 85, 247, 0.2);
 }
 
 .hero::after {
@@ -278,48 +278,48 @@ body::after {
   right: 10%;
   width: 70px;
   height: 70px;
-  background: radial-gradient(circle at 70% 30%, rgba(59, 130, 246, 0.22) 0%, rgba(37, 99, 235, 0.12) 50%, transparent 80%);
+  background: radial-gradient(circle at 70% 30%, rgba(168, 85, 247, 0.22) 0%, rgba(147, 51, 234, 0.12) 50%, transparent 80%);
   border-radius: 50%;
-  animation: cosmicOrb2 18s ease-in-out infinite reverse;
+  animation: purpleCosmicOrb2 18s ease-in-out infinite reverse;
   z-index: -1;
   pointer-events: none;
   box-shadow:
-    0 0 35px rgba(59, 130, 246, 0.25),
-    inset 0 0 35px rgba(37, 99, 235, 0.15);
+    0 0 35px rgba(168, 85, 247, 0.25),
+    inset 0 0 35px rgba(147, 51, 234, 0.15);
 }
 
-/* Cosmic energy streams */
+/* Optimized purple space rocks */
 .site-header::before {
   content: '';
   position: fixed;
   top: 25%;
-  right: 22%;
-  width: 4px;
-  height: 150px;
-  background: linear-gradient(180deg, transparent, rgba(37, 99, 235, 0.6), rgba(59, 130, 246, 0.6), transparent);
-  animation: energyStream1 12s ease-in-out infinite;
+  right: 20%;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(ellipse at 30% 30%, rgba(120, 80, 140, 0.25) 0%, rgba(90, 60, 110, 0.15) 60%, transparent 80%);
+  border-radius: 50% 40% 60% 30%;
+  animation: purpleSpaceRock1 45s ease-in-out infinite;
   z-index: -1;
   pointer-events: none;
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
-  transform: rotate(25deg);
+  box-shadow: 0 0 15px rgba(120, 80, 140, 0.15);
 }
 
 .site-header::after {
   content: '';
   position: fixed;
-  bottom: 32%;
-  left: 18%;
-  width: 4px;
-  height: 120px;
-  background: linear-gradient(0deg, transparent, rgba(59, 130, 246, 0.5), rgba(37, 99, 235, 0.5), transparent);
-  animation: energyStream2 15s ease-in-out infinite reverse;
+  bottom: 30%;
+  left: 15%;
+  width: 25px;
+  height: 25px;
+  background: radial-gradient(ellipse at 70% 30%, rgba(110, 70, 130, 0.2) 0%, rgba(80, 50, 100, 0.12) 60%, transparent 80%);
+  border-radius: 40% 60% 30% 50%;
+  animation: purpleSpaceRock2 50s ease-in-out infinite reverse;
   z-index: -1;
   pointer-events: none;
-  box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
-  transform: rotate(-35deg);
+  box-shadow: 0 0 12px rgba(110, 70, 130, 0.12);
 }
 
-/* Floating cosmic particles */
+/* Optimized purple cosmic particles */
 .hero .container::before {
   content: '';
   position: fixed;
@@ -327,12 +327,12 @@ body::after {
   left: 8%;
   width: 25px;
   height: 25px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.4) 0%, rgba(37, 99, 235, 0.1) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(147, 51, 234, 0.4) 0%, rgba(147, 51, 234, 0.1) 70%, transparent 100%);
   border-radius: 50%;
-  animation: cosmicParticle1 10s ease-in-out infinite;
+  animation: purpleCosmicParticle1 10s ease-in-out infinite;
   z-index: -1;
   pointer-events: none;
-  box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+  box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
 }
 
 .hero .container::after {
@@ -342,15 +342,15 @@ body::after {
   right: 15%;
   width: 20px;
   height: 20px;
-  background: radial-gradient(circle, rgba(59, 130, 246, 0.4) 0%, rgba(59, 130, 246, 0.1) 70%, transparent 100%);
+  background: radial-gradient(circle, rgba(168, 85, 247, 0.4) 0%, rgba(168, 85, 247, 0.1) 70%, transparent 100%);
   border-radius: 50%;
-  animation: cosmicParticle2 13s ease-in-out infinite reverse;
+  animation: purpleCosmicParticle2 13s ease-in-out infinite reverse;
   z-index: -1;
   pointer-events: none;
-  box-shadow: 0 0 18px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.3);
 }
 
-/* Central cosmic core */
+/* Optimized purple cosmic core */
 .hero .hero-logo::before {
   content: '';
   position: fixed;
@@ -360,265 +360,283 @@ body::after {
   width: 180px;
   height: 180px;
   background:
-    radial-gradient(circle at center, transparent 30%, rgba(37, 99, 235, 0.04) 31%, rgba(37, 99, 235, 0.04) 32%, transparent 33%),
-    radial-gradient(circle at center, transparent 50%, rgba(59, 130, 246, 0.03) 51%, rgba(59, 130, 246, 0.03) 52%, transparent 53%);
+    radial-gradient(circle at center, transparent 30%, rgba(147, 51, 234, 0.04) 31%, rgba(147, 51, 234, 0.04) 32%, transparent 33%),
+    radial-gradient(circle at center, transparent 50%, rgba(168, 85, 247, 0.03) 51%, rgba(168, 85, 247, 0.03) 52%, transparent 53%);
   border-radius: 50%;
-  animation: cosmicCore 25s ease-in-out infinite;
+  animation: purpleCosmicCore 25s ease-in-out infinite;
   z-index: -2;
   pointer-events: none;
 }
 
-/* Additional cosmic elements */
+/* Optimized purple distant object */
 .hero .hero-logo::after {
   content: '';
   position: fixed;
-  top: 45%;
-  right: 25%;
-  width: 35px;
-  height: 35px;
-  background: radial-gradient(circle, rgba(37, 99, 235, 0.3) 0%, rgba(59, 130, 246, 0.15) 60%, transparent 90%);
-  border-radius: 50%;
-  animation: cosmicSparkle1 8s ease-in-out infinite;
+  top: 35%;
+  right: 30%;
+  width: 50px;
+  height: 50px;
+  background: radial-gradient(ellipse at 40% 30%, rgba(130, 90, 160, 0.15) 0%, rgba(100, 70, 130, 0.08) 50%, transparent 80%);
+  border-radius: 50% 30% 40% 60%;
+  animation: purpleDistantObject1 90s ease-in-out infinite;
   z-index: -1;
   pointer-events: none;
-  box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
+  box-shadow: 0 0 20px rgba(130, 90, 160, 0.08);
 }
 
-/* Cosmic animation keyframes */
-@keyframes cosmicFlow {
+/* Optimized purple animation keyframes */
+@keyframes purpleSpaceDrift {
   0%, 100% {
     background:
-      radial-gradient(circle at 15% 25%, rgba(37, 99, 235, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 85% 75%, rgba(59, 130, 246, 0.08) 0%, transparent 50%),
-      radial-gradient(circle at 45% 55%, rgba(37, 99, 235, 0.05) 0%, transparent 70%);
-    transform: scale(1) rotate(0deg);
+      radial-gradient(ellipse at 20% 30%, rgba(88, 28, 135, 0.6) 0%, rgba(48, 16, 80, 0.4) 30%, transparent 70%),
+      radial-gradient(ellipse at 80% 70%, rgba(98, 38, 145, 0.5) 0%, rgba(58, 26, 90, 0.3) 35%, transparent 75%),
+      radial-gradient(circle at 40% 40%, rgba(147, 51, 234, 0.02) 0%, transparent 60%),
+      radial-gradient(circle at 60% 60%, rgba(168, 85, 247, 0.015) 0%, transparent 70%);
+    transform: translateX(0) translateY(0) scale(1);
   }
-  25% {
+  33% {
     background:
-      radial-gradient(circle at 25% 15%, rgba(37, 99, 235, 0.12) 0%, transparent 60%),
-      radial-gradient(circle at 75% 85%, rgba(59, 130, 246, 0.12) 0%, transparent 60%),
-      radial-gradient(circle at 55% 45%, rgba(37, 99, 235, 0.08) 0%, transparent 80%);
-    transform: scale(1.03) rotate(2deg);
+      radial-gradient(ellipse at 25% 25%, rgba(95, 35, 142, 0.55) 0%, rgba(55, 23, 87, 0.35) 35%, transparent 75%),
+      radial-gradient(ellipse at 75% 75%, rgba(105, 45, 152, 0.45) 0%, rgba(65, 33, 97, 0.25) 40%, transparent 80%),
+      radial-gradient(circle at 45% 35%, rgba(147, 51, 234, 0.018) 0%, transparent 65%),
+      radial-gradient(circle at 55% 65%, rgba(168, 85, 247, 0.013) 0%, transparent 75%);
+    transform: translateX(-8px) translateY(-4px) scale(1.015);
   }
-  50% {
+  66% {
     background:
-      radial-gradient(circle at 35% 35%, rgba(37, 99, 235, 0.1) 0%, transparent 55%),
-      radial-gradient(circle at 65% 65%, rgba(59, 130, 246, 0.1) 0%, transparent 55%),
-      radial-gradient(circle at 35% 65%, rgba(37, 99, 235, 0.06) 0%, transparent 75%);
-    transform: scale(1.06) rotate(0deg);
-  }
-  75% {
-    background:
-      radial-gradient(circle at 20% 40%, rgba(37, 99, 235, 0.11) 0%, transparent 58%),
-      radial-gradient(circle at 80% 60%, rgba(59, 130, 246, 0.11) 0%, transparent 58%),
-      radial-gradient(circle at 60% 40%, rgba(37, 99, 235, 0.07) 0%, transparent 78%);
-    transform: scale(1.03) rotate(-2deg);
+      radial-gradient(ellipse at 30% 35%, rgba(92, 32, 138, 0.58) 0%, rgba(52, 20, 83, 0.38) 32%, transparent 72%),
+      radial-gradient(ellipse at 70% 65%, rgba(102, 42, 148, 0.48) 0%, rgba(62, 30, 93, 0.28) 37%, transparent 77%),
+      radial-gradient(circle at 35% 45%, rgba(147, 51, 234, 0.019) 0%, transparent 62%),
+      radial-gradient(circle at 65% 55%, rgba(168, 85, 247, 0.014) 0%, transparent 72%);
+    transform: translateX(6px) translateY(-10px) scale(1.01);
   }
 }
 
-@keyframes cosmicWaves {
-  0% {
-    background-position: 0% 0%;
-    opacity: 0.4;
-  }
-  25% {
-    background-position: 25% 25%;
-    opacity: 0.7;
+@keyframes purpleNebulaFlow {
+  0%, 100% {
+    background:
+      radial-gradient(ellipse 600px 300px at 25% 25%, rgba(147, 51, 234, 0.03) 0%, transparent 60%),
+      radial-gradient(ellipse 500px 250px at 75% 75%, rgba(168, 85, 247, 0.025) 0%, transparent 65%);
+    opacity: 0.5;
+    transform: translateX(0) translateY(0);
   }
   50% {
-    background-position: 50% 50%;
-    opacity: 0.5;
+    background:
+      radial-gradient(ellipse 650px 350px at 30% 20%, rgba(147, 51, 234, 0.028) 0%, transparent 65%),
+      radial-gradient(ellipse 550px 300px at 70% 80%, rgba(168, 85, 247, 0.022) 0%, transparent 70%);
+    opacity: 0.7;
+    transform: translateX(15px) translateY(-12px);
   }
-  75% {
-    background-position: 75% 75%;
+}
+
+@keyframes purpleStarDrift1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.6;
+    box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+  }
+  50% {
+    transform: translate(300px, -150px);
     opacity: 0.8;
+    box-shadow: 0 0 12px rgba(147, 51, 234, 0.6);
   }
   100% {
-    background-position: 100% 100%;
+    transform: translate(600px, -300px);
+    opacity: 0.6;
+    box-shadow: 0 0 8px rgba(147, 51, 234, 0.4);
+  }
+}
+
+@keyframes purpleStarDrift2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.5;
+    box-shadow: 0 0 6px rgba(168, 85, 247, 0.35);
+  }
+  50% {
+    transform: translate(-350px, 120px);
+    opacity: 0.7;
+    box-shadow: 0 0 10px rgba(168, 85, 247, 0.5);
+  }
+  100% {
+    transform: translate(-700px, 240px);
+    opacity: 0.5;
+    box-shadow: 0 0 6px rgba(168, 85, 247, 0.35);
+  }
+}
+
+@keyframes purpleSpaceRock1 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.3;
+  }
+  33% {
+    transform: translate(30px, -40px) rotate(120deg) scale(1.05);
+    opacity: 0.5;
+  }
+  66% {
+    transform: translate(-25px, -80px) rotate(240deg) scale(0.95);
+    opacity: 0.25;
+  }
+}
+
+@keyframes purpleSpaceRock2 {
+  0%, 100% {
+    transform: translate(0, 0) rotate(0deg) scale(1);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-40px, 30px) rotate(-180deg) scale(1.1);
     opacity: 0.4;
   }
 }
 
-@keyframes cosmicOrb1 {
+@keyframes purpleSpaceDust1 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translate(400px, -200px);
+    opacity: 0.6;
+  }
+  100% {
+    transform: translate(800px, -400px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes purpleSpaceDust2 {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0.25;
+  }
+  50% {
+    transform: translate(-450px, 150px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-900px, 300px);
+    opacity: 0.25;
+  }
+}
+
+@keyframes purpleCosmicOrb1 {
   0%, 100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     opacity: 0.7;
     box-shadow:
-      0 0 40px rgba(37, 99, 235, 0.3),
-      inset 0 0 40px rgba(59, 130, 246, 0.2);
+      0 0 40px rgba(147, 51, 234, 0.3),
+      inset 0 0 40px rgba(168, 85, 247, 0.2);
   }
   20% {
     transform: translate(25px, -35px) scale(1.15) rotate(72deg);
     opacity: 0.9;
     box-shadow:
-      0 0 60px rgba(37, 99, 235, 0.5),
-      inset 0 0 60px rgba(59, 130, 246, 0.3);
+      0 0 60px rgba(147, 51, 234, 0.5),
+      inset 0 0 60px rgba(168, 85, 247, 0.3);
   }
   40% {
     transform: translate(-20px, -60px) scale(0.85) rotate(144deg);
     opacity: 0.5;
     box-shadow:
-      0 0 30px rgba(37, 99, 235, 0.2),
-      inset 0 0 30px rgba(59, 130, 246, 0.1);
+      0 0 30px rgba(147, 51, 234, 0.2),
+      inset 0 0 30px rgba(168, 85, 247, 0.1);
   }
   60% {
     transform: translate(35px, -25px) scale(1.1) rotate(216deg);
     opacity: 0.8;
     box-shadow:
-      0 0 50px rgba(37, 99, 235, 0.4),
-      inset 0 0 50px rgba(59, 130, 246, 0.25);
+      0 0 50px rgba(147, 51, 234, 0.4),
+      inset 0 0 50px rgba(168, 85, 247, 0.25);
   }
   80% {
     transform: translate(-15px, -45px) scale(0.9) rotate(288deg);
     opacity: 0.6;
     box-shadow:
-      0 0 35px rgba(37, 99, 235, 0.25),
-      inset 0 0 35px rgba(59, 130, 246, 0.15);
+      0 0 35px rgba(147, 51, 234, 0.25),
+      inset 0 0 35px rgba(168, 85, 247, 0.15);
   }
 }
 
-@keyframes cosmicOrb2 {
+@keyframes purpleCosmicOrb2 {
   0%, 100% {
     transform: translate(0, 0) scale(1) rotate(0deg);
     opacity: 0.6;
     box-shadow:
-      0 0 35px rgba(59, 130, 246, 0.25),
-      inset 0 0 35px rgba(37, 99, 235, 0.15);
+      0 0 35px rgba(168, 85, 247, 0.25),
+      inset 0 0 35px rgba(147, 51, 234, 0.15);
   }
   30% {
     transform: translate(-30px, 25px) scale(1.25) rotate(-90deg);
     opacity: 0.9;
     box-shadow:
-      0 0 55px rgba(59, 130, 246, 0.4),
-      inset 0 0 55px rgba(37, 99, 235, 0.25);
+      0 0 55px rgba(168, 85, 247, 0.4),
+      inset 0 0 55px rgba(147, 51, 234, 0.25);
   }
   60% {
     transform: translate(20px, -40px) scale(0.8) rotate(-180deg);
     opacity: 0.4;
     box-shadow:
-      0 0 25px rgba(59, 130, 246, 0.15),
-      inset 0 0 25px rgba(37, 99, 235, 0.1);
+      0 0 25px rgba(168, 85, 247, 0.15),
+      inset 0 0 25px rgba(147, 51, 234, 0.1);
   }
   90% {
     transform: translate(-25px, 30px) scale(1.15) rotate(-270deg);
     opacity: 0.7;
     box-shadow:
-      0 0 45px rgba(59, 130, 246, 0.3),
-      inset 0 0 45px rgba(37, 99, 235, 0.2);
+      0 0 45px rgba(168, 85, 247, 0.3),
+      inset 0 0 45px rgba(147, 51, 234, 0.2);
   }
 }
 
-@keyframes energyStream1 {
-  0%, 100% {
-    opacity: 0.3;
-    transform: translateY(0) rotate(25deg);
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.4);
-  }
-  33% {
-    opacity: 0.8;
-    transform: translateY(-20px) rotate(25deg);
-    box-shadow: 0 0 35px rgba(37, 99, 235, 0.7);
-  }
-  66% {
-    opacity: 0.5;
-    transform: translateY(15px) rotate(25deg);
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.5);
-  }
-}
-
-@keyframes energyStream2 {
-  0%, 100% {
-    opacity: 0.25;
-    transform: translateY(0) rotate(-35deg);
-    box-shadow: 0 0 18px rgba(59, 130, 246, 0.35);
-  }
-  40% {
-    opacity: 0.7;
-    transform: translateY(25px) rotate(-35deg);
-    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
-  }
-  80% {
-    opacity: 0.4;
-    transform: translateY(-18px) rotate(-35deg);
-    box-shadow: 0 0 22px rgba(59, 130, 246, 0.4);
-  }
-}
-
-@keyframes cosmicParticle1 {
+@keyframes purpleCosmicParticle1 {
   0%, 100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.5;
-    box-shadow: 0 0 20px rgba(37, 99, 235, 0.3);
+    box-shadow: 0 0 20px rgba(147, 51, 234, 0.3);
   }
   25% {
     transform: translate(40px, -50px) scale(1.4);
     opacity: 0.9;
-    box-shadow: 0 0 35px rgba(37, 99, 235, 0.6);
+    box-shadow: 0 0 35px rgba(147, 51, 234, 0.6);
   }
   50% {
     transform: translate(-25px, -80px) scale(0.7);
     opacity: 0.3;
-    box-shadow: 0 0 15px rgba(37, 99, 235, 0.2);
+    box-shadow: 0 0 15px rgba(147, 51, 234, 0.2);
   }
   75% {
     transform: translate(50px, -30px) scale(1.2);
     opacity: 0.7;
-    box-shadow: 0 0 28px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 0 28px rgba(147, 51, 234, 0.5);
   }
 }
 
-@keyframes cosmicParticle2 {
+@keyframes purpleCosmicParticle2 {
   0%, 100% {
     transform: translate(0, 0) scale(1);
     opacity: 0.4;
-    box-shadow: 0 0 18px rgba(59, 130, 246, 0.3);
+    box-shadow: 0 0 18px rgba(168, 85, 247, 0.3);
   }
   30% {
     transform: translate(-40px, 30px) scale(1.5);
     opacity: 0.8;
-    box-shadow: 0 0 32px rgba(59, 130, 246, 0.6);
+    box-shadow: 0 0 32px rgba(168, 85, 247, 0.6);
   }
   60% {
     transform: translate(30px, -45px) scale(0.6);
     opacity: 0.2;
-    box-shadow: 0 0 12px rgba(59, 130, 246, 0.15);
+    box-shadow: 0 0 12px rgba(168, 85, 247, 0.15);
   }
   90% {
     transform: translate(-20px, 35px) scale(1.3);
     opacity: 0.6;
-    box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+    box-shadow: 0 0 25px rgba(168, 85, 247, 0.4);
   }
 }
 
-@keyframes cosmicSparkle1 {
-  0%, 100% {
-    transform: translate(0, 0) scale(1) rotate(0deg);
-    opacity: 0.4;
-    box-shadow: 0 0 25px rgba(37, 99, 235, 0.4);
-  }
-  20% {
-    transform: translate(15px, -20px) scale(1.3) rotate(72deg);
-    opacity: 0.8;
-    box-shadow: 0 0 40px rgba(37, 99, 235, 0.7);
-  }
-  40% {
-    transform: translate(-25px, -10px) scale(0.8) rotate(144deg);
-    opacity: 0.6;
-    box-shadow: 0 0 30px rgba(37, 99, 235, 0.5);
-  }
-  60% {
-    transform: translate(20px, -30px) scale(1.1) rotate(216deg);
-    opacity: 0.7;
-    box-shadow: 0 0 35px rgba(37, 99, 235, 0.6);
-  }
-  80% {
-    transform: translate(-10px, -25px) scale(0.9) rotate(288deg);
-    opacity: 0.5;
-    box-shadow: 0 0 28px rgba(37, 99, 235, 0.4);
-  }
-}
-
-@keyframes cosmicCore {
+@keyframes purpleCosmicCore {
   0%, 100% {
     transform: translate(-50%, -50%) scale(1) rotate(0deg);
     opacity: 0.3;
@@ -843,11 +861,11 @@ body::after {
   justify-content: center;
   align-items: center;
 }
-/* Trusted list items - solid white only */
+/* Trusted list items with icons */
 .trusted-list li {
   border: 1px solid #e5e7eb;
   border-radius: 12px;
-  padding: 12px 20px;
+  padding: 16px 24px;
   background: #ffffff;
   font-size: 14px;
   font-weight: 600;
@@ -855,13 +873,71 @@ body::after {
   color: var(--fg);
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
   transition: all 200ms ease;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 170px;
+  flex: 0 0 auto;
+  height: 64px;
 }
-.trusted-list li:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+.trusted-list li img.trusted-logo {
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  opacity: 1;
+}
+/* Mobile trusted logos - 3 column grid */
+@media (max-width: 768px) {
+  .trusted-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    max-width: 100%;
+  }
+
+  .trusted-list li {
+    min-width: auto;
+    height: auto;
+    padding: 12px 8px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trusted-list li img.trusted-logo {
+    width: 32px;
+    height: 32px;
+    margin: 0 auto 6px;
+    display: block;
+    order: -1;
+  }
 }
 
-/* Testimonials */
+/* Extra small mobile - 2 column grid */
+@media (max-width: 480px) {
+  .trusted-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .trusted-list li {
+    padding: 10px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .trusted-list li img.trusted-logo {
+    width: 28px;
+    height: 28px;
+    margin: 0 auto 4px;
+    display: block;
+    order: -1;
+  }
+}
 /* Testimonials section - no background */
 .testimonials {
   background: transparent;
@@ -1756,15 +1832,18 @@ body::after {
   }
 
   .cta {
-    flex-direction: column;
-    gap: 12px;
+    flex-direction: row;
+    gap: 16px;
     width: 100%;
     align-items: stretch;
+    justify-content: center;
   }
   
   .btn {
-    width: 100%;
+    width: auto;
     justify-content: center;
+    flex: 1;
+    max-width: 200px;
   }
   
   /* Mobile cards */
@@ -1931,9 +2010,24 @@ body::after {
 
 /* Extra small mobile devices */
 @media (max-width: 480px) {
-  .container {
-    width: 95vw;
-    padding: 0 16px;
+  /* Ensure mobile-first responsive design */
+  html {
+    font-size: 16px;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+  }
+
+  /* Prevent horizontal scrolling */
+  body {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100vw;
+  }
+
+  /* Ensure all elements fit within viewport */
+  * {
+    max-width: 100%;
+    box-sizing: border-box;
   }
 
   .hero-logo {
