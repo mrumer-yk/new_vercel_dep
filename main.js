@@ -179,24 +179,22 @@ function setupMobileMenu() {
   });
 }
 
-// Import authentication and Firebase functions (skip if window.skipAuth is set)
+// Import authentication and Firebase functions
 let saveRegistrationToFirebase = null;
 
-if (!window.skipAuth) {
-  import('./auth.js').then((authModule) => {
-    console.log('Authentication module loaded successfully');
-    saveRegistrationToFirebase = authModule.saveRegistrationToFirebase;
-    // The auth manager will initialize itself
-  }).catch(error => {
-    console.error('Failed to load authentication module:', error);
-    // Show user-friendly error
-    const authButtons = document.getElementById('auth-buttons');
-    
-    if (authButtons) {
-      authButtons.innerHTML = '<span style="color: #ef4444; font-size: 14px;">Auth service unavailable</span>';
-    }
-  });
-}
+import('./auth.js').then((authModule) => {
+  console.log('Authentication module loaded successfully');
+  saveRegistrationToFirebase = authModule.saveRegistrationToFirebase;
+  // The auth manager will initialize itself
+}).catch(error => {
+  console.error('Failed to load authentication module:', error);
+  // Show user-friendly error
+  const authButtons = document.getElementById('auth-buttons');
+
+  if (authButtons) {
+    authButtons.innerHTML = '<span style="color: #ef4444; font-size: 14px;">Auth service unavailable</span>';
+  }
+});
 
 setupFAQ();
 setupTestimonials();
@@ -258,21 +256,21 @@ function setupPrelaunchForm() {
     submitBtn.disabled = true;
     
     try {
-      // Save to Firebase (if available)
-      if (saveRegistrationToFirebase && !window.skipAuth) {
+      // Save to Firebase
+      if (saveRegistrationToFirebase) {
         const result = await saveRegistrationToFirebase(data);
-        
+
         if (result.success) {
           // Show success message
           form.style.display = 'none';
           successMessage.style.display = 'block';
-          
+
           // Update count
           count++;
           if (registrationCount) {
             registrationCount.textContent = count;
           }
-          
+
           console.log('Registration successful:', data);
         } else {
           throw new Error(result.error || 'Failed to save registration');
@@ -282,17 +280,17 @@ function setupPrelaunchForm() {
         const registrations = JSON.parse(localStorage.getItem('prelaunchRegistrations') || '[]');
         registrations.push(data);
         localStorage.setItem('prelaunchRegistrations', JSON.stringify(registrations));
-        
+
         // Show success message
         form.style.display = 'none';
         successMessage.style.display = 'block';
-        
+
         // Update count
         count++;
         if (registrationCount) {
           registrationCount.textContent = count;
         }
-        
+
         console.log('Registration saved locally:', data);
       }
       
@@ -300,14 +298,9 @@ function setupPrelaunchForm() {
       console.error('Registration failed:', error);
       
       // Show user-friendly error message
-      let errorMsg;
-      if (window.skipAuth) {
-        errorMsg = 'Registration service is not available on this page.';
-      } else if (error.message.includes('Firebase')) {
-        errorMsg = 'Registration failed. Please check your connection and try again.';
-      } else {
-        errorMsg = 'Registration failed. Please try again.';
-      }
+      const errorMsg = error.message.includes('Firebase') ? 
+        'Registration failed. Please check your connection and try again.' :
+        'Registration failed. Please try again.';
       
       alert(errorMsg);
       
