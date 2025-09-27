@@ -10,14 +10,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 
-  <!-- Firebase Authentication -->
-  <script type="module">
-    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
-    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
-    window.firebaseConfig = {
-      // Firebase config will be loaded from auth.js
-    };
-  </script>
 </head>
 <body>
 
@@ -32,19 +24,16 @@
       <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
         <span class="hamburger-line"></span>
         <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
       </button>
 
       <!-- Navigation Menu -->
       <nav class="nav" id="mainNav">
         <div class="nav-links">
-          <a href="index.html#features" class="nav-link">Features</a>
-          <a href="index.html#how" class="nav-link">How It Works</a>
-          <a href="price.html" class="nav-link active">Pricing</a>
-          <a href="index.html#register" class="nav-link">Early Access</a>
-          <a href="index.html#faq" class="nav-link">FAQ</a>
+          <a href="index.html" class="nav-link">Home</a>
+          <a href="#contact" class="nav-link">Contact</a>
+          <a href="#shortcuts" class="nav-link">Keys</a>
         </div>
-
+        
         <div class="nav-auth">
           <div id="auth-buttons">
             <button id="loginBtn" class="auth-btn">Login</button>
@@ -95,9 +84,6 @@
             <li>✓ Standard response time</li>
             <li>✓ Web dashboard access</li>
           </ul>
-          <div class="card-footer">
-            <button class="btn primary" style="width: 100%;">Get Started Free</button>
-          </div>
         </div>
 
         <!-- Pro Plan -->
@@ -118,9 +104,6 @@
             <li>✓ Performance analytics</li>
             <li>✓ API access</li>
           </ul>
-          <div class="card-footer">
-            <button class="btn primary" style="width: 100%;">Start Free Trial</button>
-          </div>
         </div>
 
         <!-- Enterprise Plan -->
@@ -141,68 +124,6 @@
             <li>✓ Custom integrations</li>
             <li>✓ On-premise deployment</li>
           </ul>
-          <div class="card-footer">
-            <button class="btn primary" style="width: 100%;">Contact Sales</button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Referral Section -->
-  <section id="referral" class="section referral reveal">
-    <div class="container">
-      <div class="referral-content">
-        <div class="referral-info">
-          <h2 class="section-title">Earn Rewards with Referrals</h2>
-          <p class="section-sub">Share CodeMaster Pro with your network and earn free months of service for every successful referral.</p>
-
-          <div class="referral-benefits">
-            <h3>How it works:</h3>
-            <ul class="benefits-list">
-              <li>🔗 <strong>Share your unique link</strong> with friends and colleagues</li>
-              <li>🎯 <strong>They get 20% off</strong> their first month</li>
-              <li>🎁 <strong>You earn 1 free month</strong> for each successful referral</li>
-              <li>📈 <strong>Track your earnings</strong> in your dashboard</li>
-              <li>🔄 <strong>No limits</strong> - refer as many as you want!</li>
-            </ul>
-          </div>
-
-          <div class="referral-stats">
-            <div class="stat">
-              <div class="stat-number">2,847</div>
-              <div class="stat-label">Successful Referrals</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">$12,500+</div>
-              <div class="stat-label">Rewards Earned</div>
-            </div>
-            <div class="stat">
-              <div class="stat-number">94%</div>
-              <div class="stat-label">Conversion Rate</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="referral-form-container">
-          <div class="referral-card">
-            <h3>Start Earning Today</h3>
-            <p>Get your unique referral link and start earning rewards!</p>
-
-            <div class="referral-link-container">
-              <input type="text" id="referralLink" value="https://codemaster.pro/ref/john_doe_2024" readonly>
-              <button class="btn primary" onclick="copyReferralLink()">Copy Link</button>
-            </div>
-
-            <div class="social-share">
-              <p>Share on:</p>
-              <div class="share-buttons">
-                <button class="share-btn twitter" onclick="shareOnTwitter()">Twitter</button>
-                <button class="share-btn linkedin" onclick="shareOnLinkedIn()">LinkedIn</button>
-                <button class="share-btn email" onclick="shareByEmail()">Email</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </div>
@@ -335,35 +256,5 @@
     </div>
   </footer>
 
-  <script type="module" src="/auth.js"></script>
-  <script type="module" src="/main.js"></script>
-  <script>
-    // Copy referral link function
-    function copyReferralLink() {
-      const linkInput = document.getElementById('referralLink');
-      linkInput.select();
-      document.execCommand('copy');
-      alert('Referral link copied to clipboard!');
-    }
-
-    // Social sharing functions
-    function shareOnTwitter() {
-      const text = encodeURIComponent('Check out CodeMaster Pro - AI-powered coding interview assistant!');
-      const url = encodeURIComponent('https://codemaster.pro/ref/john_doe_2024');
-      window.open(`https://twitter.com/intent/tweet?text=${text}&url=${url}`, '_blank');
-    }
-
-    function shareOnLinkedIn() {
-      const url = encodeURIComponent('https://codemaster.pro/ref/john_doe_2024');
-      const title = encodeURIComponent('CodeMaster Pro - AI-Powered Coding Interview Assistant');
-      window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${url}`, '_blank');
-    }
-
-    function shareByEmail() {
-      const subject = encodeURIComponent('Try CodeMaster Pro - Get 20% off!');
-      const body = encodeURIComponent('Hi! I\'m using CodeMaster Pro to ace my coding interviews. It\'s amazing! Use my referral link to get 20% off your first month: https://codemaster.pro/ref/john_doe_2024');
-      window.open(`mailto:?subject=${subject}&body=${body}`);
-    }
-  </script>
 </body>
 </html>
