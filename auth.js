@@ -99,16 +99,6 @@ class AuthManager {
       });
     }
 
-    // Download button
-    const downloadBtn = document.getElementById('downloadBtn');
-    if (downloadBtn) {
-      console.log('✅ Download button found');
-      downloadBtn.addEventListener('click', () => {
-        console.log('🔘 Download clicked');
-        this.handleDownload();
-      });
-    }
-
     // Auth modal buttons
     const emailSignInBtn = document.getElementById('emailSignInBtn');
     if (emailSignInBtn) {
@@ -140,6 +130,9 @@ class AuthManager {
         }
       });
     }
+
+    const logoutBtn = document.getElementById('logoutBtn');
+    if (logoutBtn) logoutBtn.addEventListener('click', () => this.signOutUser());
   }
 
   async signIn() {
@@ -294,6 +287,7 @@ class AuthManager {
           Already have an account? <a href="#" id="switch-to-signin" style="color: #2563eb;">Sign in here</a>
         </p>
       </div>
+    </div>
     `;
     
     document.body.appendChild(modal);
@@ -345,83 +339,28 @@ class AuthManager {
     }
   }
 
-  handleDownload() {
-    if (this.isSignedIn) {
-      console.log('✅ Starting download for authenticated user...');
-      this.initiateDownload();
-    } else {
-      console.log('🔒 Need to sign in first');
-      this.showAuthModal();
-    }
-  }
-
-  initiateDownload() {
-    // Replace with your actual download logic
-    console.log('Download initiated for user:', this.currentUser?.uid);
-    this.showSuccess('Download started! Check your downloads folder.');
-  }
-
-  // Modal management
   showAuthModal() {
-    const authModal = document.getElementById('authModal');
-    if (authModal) {
-      authModal.style.display = 'flex';
-      document.body.style.overflow = 'hidden';
-    }
+    const m = document.getElementById('authModal');
+    if (m) { m.style.display = 'flex'; document.body.style.overflow = 'hidden'; }
   }
-
   closeAuthModal() {
-    const authModal = document.getElementById('authModal');
-    if (authModal) {
-      authModal.style.display = 'none';
-      document.body.style.overflow = 'auto';
-    }
+    const m = document.getElementById('authModal');
+    if (m) { m.style.display = 'none'; document.body.style.overflow = ''; }
   }
-
   showFallbackModal(type = 'signin') {
-    // Remove any existing modal
     const existing = document.getElementById('fallback-modal');
     if (existing) existing.remove();
-    
     const modal = document.createElement('div');
     modal.id = 'fallback-modal';
-    modal.innerHTML = `
-      <div style="position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.5);display:flex;align-items:center;justify-content:center;z-index:9999;">
-        <div style="background:white;padding:2rem;border-radius:8px;text-align:center;max-width:400px;box-shadow:0 4px 6px rgba(0,0,0,0.1);">
-          <h3 style="margin:0 0 1rem 0;color:#333;">${type === 'signin' ? 'Sign In' : 'Sign Up'}</h3>
-          <p style="margin:0 0 1.5rem 0;color:#666;">Authentication service is temporarily unavailable.<br>For demo purposes, you can continue as a guest user.</p>
-          <div style="display:flex;gap:1rem;justify-content:center;">
-            <button onclick="authManager.demoLogin();document.getElementById('fallback-modal').remove()" 
-                    style="background:#2563eb;color:white;border:none;padding:0.75rem 1.5rem;border-radius:4px;cursor:pointer;font-size:14px;">
-              Continue as Demo User
-            </button>
-            <button onclick="document.getElementById('fallback-modal').remove()" 
-                    style="background:#6b7280;color:white;border:none;padding:0.75rem 1.5rem;border-radius:4px;cursor:pointer;font-size:14px;">
-              Cancel
-            </button>
-          </div>
-        </div>
-      </div>
-    `;
+    modal.innerHTML = `<div style="position:fixed;inset:0;background:rgba(15,23,42,.5);display:flex;align-items:center;justify-content:center;z-index:9999;padding:16px;"><div style="background:#fff;padding:24px;border-radius:16px;text-align:center;max-width:400px;box-shadow:0 10px 30px rgba(15,23,42,.2);"><h3 style="margin:0 0 8px;">${type==='signin'?'Sign In':'Sign Up'}</h3><p style="margin:0 0 16px;color:#64748b;">Auth service is temporarily unavailable. Please try again later.</p><button onclick="document.getElementById('fallback-modal').remove()" style="background:#2563eb;color:#fff;border:none;padding:10px 18px;border-radius:999px;cursor:pointer;font-weight:600;">Close</button></div></div>`;
     document.body.appendChild(modal);
-  }
-
-  demoLogin() {
-    console.log('🎭 Demo login activated');
-    this.isSignedIn = true;
-    this.currentUser = { 
-      uid: 'demo-123',
-      displayName: 'Demo User',
-      email: 'demo@example.com'
-    };
-    this.updateUI();
-    console.log('✅ Demo user signed in successfully');
+    modal.addEventListener('click', (e) => { if (e.target === modal.firstElementChild) modal.remove(); });
   }
 
   updateUI() {
     const loginBtn = document.getElementById('loginBtn');
     const signupBtn = document.getElementById('signupBtn');
-    const downloadBtn = document.getElementById('downloadBtn');
+    const userMenu = document.getElementById('user-menu');
 
     console.log('🎨 Updating UI, signed in:', this.isSignedIn);
 
@@ -436,24 +375,20 @@ class AuthManager {
       if (signupBtn) {
         signupBtn.style.display = 'none';
       }
-      if (downloadBtn) {
-        downloadBtn.textContent = 'Download Now';
-        downloadBtn.disabled = false;
-        downloadBtn.classList.remove('auth-required');
+      if (userMenu) {
+        userMenu.style.display = 'flex';
       }
     } else {
       // User is not signed in
       if (loginBtn) {
-        loginBtn.textContent = 'Login';
+        loginBtn.textContent = 'Log in';
       }
       if (signupBtn) {
         signupBtn.style.display = 'inline-block';
-        signupBtn.textContent = 'Sign Up';
+        signupBtn.textContent = 'Sign up';
       }
-      if (downloadBtn) {
-        downloadBtn.textContent = 'Login to Download';
-        downloadBtn.disabled = false;
-        downloadBtn.classList.add('auth-required');
+      if (userMenu) {
+        userMenu.style.display = 'none';
       }
     }
   }
