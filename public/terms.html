@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Terms of Service — CodeMaster</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="index.html"><img src="logo.svg" alt="CodeMaster" class="logo-img"><span class="brand-name">CodeMaster</span></a>
+      <nav class="nav" style="position:static; width:auto; height:auto; padding:0; box-shadow:none; flex-direction:row;"><a href="index.html" class="btn primary small">Home</a></nav>
+    </div>
+  </header>
+  <main class="section">
+    <div class="container" style="max-width:800px;">
+      <h1>Terms of Service</h1>
+      <p style="color:var(--muted)">Last updated: January 2026</p>
+      <h2>1. Acceptance</h2>
+      <p>By using CodeMaster you agree to these terms. Content is for educational purposes.</p>
+      <h2>2. Accounts</h2>
+      <p>Keep your credentials secure. You are responsible for activity under your account.</p>
+      <h2>3. Acceptable Use</h2>
+      <ul>
+        <li>Do not scrape, spam, or attempt to disrupt the service</li>
+        <li>Do not redistribute paid content without permission</li>
+        <li>Use code examples at your own risk; test before production use</li>
+      </ul>
+      <h2>4. Intellectual Property</h2>
+      <p>Tutorials and roadmaps are owned by CodeMaster. Code you write is yours.</p>
+      <h2>5. Disclaimer</h2>
+      <p>We strive for accuracy but do not guarantee that all content is error-free. No warranty.</p>
+      <h2>6. Contact</h2>
+      <p>Questions: <strong>hello@codemaster.example</strong></p>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="container"><div class="footer-bottom"><span>© <span id="year"></span> CodeMaster</span><div class="footer-legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></div></div></div></footer>
+  <script>document.getElementById('year').textContent=new Date().getFullYear()</script>
+</body>
+</html>

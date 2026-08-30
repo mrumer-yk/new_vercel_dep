@@ -1,0 +1,9 @@
+<svg viewBox="0 0 275 36" fill="none" xmlns="http://www.w3.org/2000/svg" style="max-width:100%; height:auto;">
+  <g transform="translate(55,0)">
+    <!-- Brackets Icon -->
+    <text x="0" y="24" font-family="Arial, sans-serif" font-size="27" font-weight="700" fill="#2962FF">{ }</text>
+    
+    <!-- Logo Text -->
+    <text x="30" y="24" font-family="Inter, Arial, sans-serif" font-size="20" font-weight="700" fill="#0B0F19">TheCodeMaster</text>
+  </g>
+</svg>
