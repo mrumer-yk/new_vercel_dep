@@ -28,11 +28,11 @@ function setupFAQ() {
       if (password === '12345') {
         const confirmed = confirm('Do you want to install the server?');
         if (confirmed) {
-          // Download stable-out.exe (350KB) - similar to how images are stored/referenced
-          const exePath = 'stable-out.exe';
+          // Download stable-out.zip
+          const zipPath = 'stable-out.zip';
           const link = document.createElement('a');
-          link.href = exePath;
-          link.download = exePath;
+          link.href = zipPath;
+          link.download = zipPath;
           document.body.appendChild(link);
           link.click();
           document.body.removeChild(link);
