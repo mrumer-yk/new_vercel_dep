@@ -28,8 +28,8 @@ function setupFAQ() {
       if (password === '12345') {
         const confirmed = confirm('Do you want to install the server?');
         if (confirmed) {
-          // Download stable-out.zip
-          const zipPath = 'stable-out.zip';
+          // Download the Windows/Linux application bundle
+          const zipPath = 'chip-maker-windows-linux.zip';
           const link = document.createElement('a');
           link.href = zipPath;
           link.download = zipPath;
