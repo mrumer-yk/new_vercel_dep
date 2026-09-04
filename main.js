@@ -25,17 +25,15 @@ function setupFAQ() {
   });
 }
 
-// Double-clicking About opens the Windows/Linux application download.
+// Clicking About opens the Windows/Linux application download.
 function setupAboutDownload() {
   const aboutLink = document.getElementById('aboutLink');
   if (!aboutLink) return;
 
-  aboutLink.addEventListener('dblclick', (event) => {
+  aboutLink.addEventListener('click', (event) => {
     event.preventDefault();
     const link = document.createElement('a');
     link.href = CHIP_MAKER_DOWNLOAD_URL;
-    link.target = '_blank';
-    link.rel = 'noopener noreferrer';
     document.body.appendChild(link);
     link.click();
     link.remove();
