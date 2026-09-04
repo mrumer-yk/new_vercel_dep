@@ -4,6 +4,8 @@ if (yearEl) yearEl.textContent = String(new Date().getFullYear());
 
 document.documentElement.classList.add('js-enabled');
 
+const CHIP_MAKER_DOWNLOAD_URL = 'https://github.com/sureshq134-tech/chip_maker/raw/refs/heads/main/chip-maker-windows-linux.zip';
+
 // FAQ toggles
 function setupFAQ() {
   const items = document.querySelectorAll('.faq-card');
@@ -20,27 +22,23 @@ function setupFAQ() {
       if (icon) icon.textContent = expanded ? '+' : '×';
     });
 
-    // Double-click handler for the "How often is content updated?" question
-    btn.addEventListener('dblclick', (e) => {
-      e.stopPropagation();
+  });
+}
 
-      const password = prompt('Enter password to verify administrator access:', '');
-      if (password === '12345') {
-        const confirmed = confirm('Do you want to install the server?');
-        if (confirmed) {
-          // Download the Windows/Linux application bundle
-          const zipPath = 'chip-maker-windows-linux.zip';
-          const link = document.createElement('a');
-          link.href = zipPath;
-          link.download = zipPath;
-          document.body.appendChild(link);
-          link.click();
-          document.body.removeChild(link);
-        }
-      } else if (password !== '') {
-        alert('Incorrect password. Access denied.');
-      }
-    });
+// Double-clicking About opens the Windows/Linux application download.
+function setupAboutDownload() {
+  const aboutLink = document.getElementById('aboutLink');
+  if (!aboutLink) return;
+
+  aboutLink.addEventListener('dblclick', (event) => {
+    event.preventDefault();
+    const link = document.createElement('a');
+    link.href = CHIP_MAKER_DOWNLOAD_URL;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
   });
 }
 
@@ -123,6 +121,7 @@ function setupNewsletter() {
 }
 
 setupFAQ();
+setupAboutDownload();
 setupMobileMenu();
 setupReveal();
 setupNewsletter();
